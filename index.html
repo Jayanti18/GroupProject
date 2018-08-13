@@ -12,14 +12,47 @@
     <title>Musictopia</title>
   </head>
   <body>
-    <!-- Heading html -->
     <div class="container">
-        <div class="row" class="heading"> 
-            <div class="col-lg"> 
-            This is the heading
+      <!-- Heading html -->
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Musictopia</h1>
+          <p class="lead">Find your favorite artist, new artist, and new music.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Search Here!</h5>
+              <p class="card-text">Search for your favorite artist, song, album or music video</p>
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Artist, Song, Album, Video" aria-label="user-input" aria-describedby="basic-addon2">
+                  <button class="btn btn-primary float-right" id="add-employee-btn">Submit</button>
+                </div>
             </div>
-        </div>    
-    </div>
+          </div>
+        </div>
+      
+        <div class="card mb-4">
+          <div class="card-body">
+            <h3 class="card-title">Results</h3>
+            <table class="table table-sm table-hover" id='employee-table'>
+              <thead>
+                <tr>
+                  <th scope="col">Artist Name</th>
+                  <th scope="col">Song Name</th>
+                  <th scope="col">Album Name</th>
+                  <th scope="col">Music Video</th>
+                  <th scope="col">Discription</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        </div>
 
      <!-- Body html -->
 
@@ -29,5 +62,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="assets/javascript/app.js"></script>
+  </div>
   </body>
 </html>
