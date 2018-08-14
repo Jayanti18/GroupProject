@@ -1,3 +1,17 @@
 body {
-    color: red;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #dcdcdc;
+    color: black;
 }
+
+.form-group {
+    margin-right: 100px;
+}
+
+#advancedDiv {
+    visibility: hidden;
+}
+

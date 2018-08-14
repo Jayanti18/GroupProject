@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-    <title>Musictopia</title>
+    <title>Music River</title>
   </head>
   <body>
     <!-- Heading html -->
+
     <div class="container">
         <div class="row" class="heading"> 
             <div class="col-lg"> 
@@ -22,6 +23,45 @@
     </div>
 
      <!-- Body html -->
+    
+    
+    <!-- User Input Group -->
+    <div class="row"> 
+      <div class="col">
+        <h3>Search Options</h3>
+        <form>
+          <div class="form-group">
+            <label for="inputTitle">Title</label>
+            <input type="text" class="form-control" id="inputTitle" placeholder="Enter title">
+            <label for="inputArtist">Artist</label>
+            <input type="text" class="form-control" id="inputArtist" placeholder="Enter artist">
+           <div id=advancedDiv> 
+            <label for="inputGenre">Genre</label>
+            <input type="text" class="form-control" id="inputGenre" placeholder="Enter genre">
+            <label for="inputYear">Year</label>
+            <input type="text" class="form-control" id="inputYear" placeholder="Enter year">
+            <label for="inputAlbum">Album</label>
+            <input type="text" class="form-control" id="inputAlbum" placeholder="Enter album">
+          </div>
+            <button class="btn btn-link" id=advancedSearch>Advanced Search</button>
+            <button class="btn btn-outline-primary" id="search">Search Song</button>
+         </div>
+         </form>
+         </div>
+        <div class="col">
+          <div id= "genreList" class="row">
+            <h5>Genre List</h5>
+          </div>
+          </div>
+          <div id="genreResults" class="col">
+            <h5>Genre Reults</h5>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
