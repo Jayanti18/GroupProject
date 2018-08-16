@@ -6,38 +6,59 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-  <link rel="stylsheet" text="text/css" href="./assets/css/style.css">
+  <link rel="stylsheet" text="text/css" href="assets/css/style.css">
 
   <title>Musictopia</title>
 </head>
 
 <body>
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Musictopia</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li>
-          <a href="contact.html">Contact Us</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Musictopia</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li>
+            <a href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-  <div class="row">
-    <div class="col s12 m6">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title">Search Here!</span>
-          <p>Search for your favorite artist, song, album or music video</p>
+  <main>
+    <div class="row">
+      <div class="col m6">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">Search Here!</span>
+            <p>Search for your favorite artist, song, album or lyrics</p>
+          </div>
+          <form action="/action_page.php">
+            <input type="text" name="fname" placeholder="  Artist, Song, Album or Lyrics">
+          </form>
+          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+          </button>
         </div>
-        <div>
-
+      </div>
+      <div class="col m6">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">Results!</span>
+            <br>
+                <span class="card-title">Artist</span>
+                <br>
+                <span class="card-title">Song</span>
+                <br>
+                <span class="card-title">Album</span>
+                <br>
+                <span class="card-title">Lyrics</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-        </button>
       </div>
     </div>
-  </div>
+  </main>
 
   <footer class="page-footer">
     <div class="container">
@@ -50,68 +71,13 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      © 2018 Copyright
+        © 2018 Copyright
       </div>
     </div>
   </footer>
 
 </body>
 
-
-
-<!-- <div class="col-xl-12">
-      <div class="card mb-4">
-        <div class="card-body">
-          <h5 class="card-title">Search Here!</h5>
-          <p class="card-text">Search for your favorite artist, song, album or music video</p>
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Artist, Song, Album, Video" aria-label="user-input" aria-describedby="basic-addon2">
-            <button class="btn btn-primary float-right" id="add-employee-btn">Submit</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-<!-- //<div class="card mb-4">
-      <div class="card-body">
-        <h3 class="card-title">Results</h3>
-        <div class="card">
-          <h5 class="card-header">Artist</h5>
-          <div class="card-body">
-          </div>
-        </div>
-        <div class="card">
-          <h5 class="card-header">Song</h5>
-          <div class="card-body">
-          </div>
-        </div>
-        <div class="card">
-          <h5 class="card-header">Album</h5>
-          <div class="card-body">
-          </div>
-        </div>
-        <div class="card">
-          <h5 class="card-header">Discription</h5>
-          <div class="card-body">
-          </div>
-        </div>
-        <div class="card">
-          <h5 class="card-header">Music Video</h5>
-          <div class="card-body">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Body html -->
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-  crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-  crossorigin="anonymous"></script>
 <script src="assets/javascript/app.js"></script>
 </div>
 </body>
