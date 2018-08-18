@@ -1,9 +1,5 @@
 console.log("hello");
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 94099c591bd8dff80dc883b6e7b6c4b1702d41af
 $("#submit").click(function getLyrics() {
 
     var artistSearch = $("input").val().trim();
