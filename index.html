@@ -34,10 +34,12 @@
             <p>Search for your favorite artist, song, album or lyrics</p>
           </div>
           <form action="/action_page.php">
-            <input type="text" name="fname" placeholder="  Artist, Song, Album or Lyrics">
+            <input class="songChoice" type="text" name="fname" placeholder="  Artist, Song, Album or Lyrics">
           </form>
-          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+          <button class="btn waves-effect waves-light" id="submit" type="submit" name="action">Submit
           </button>
+          <button id="ghost" onclick="getLyricsNow()">Ghost
+          </button>	
         </div>
       </div>
       <div class="col m6">
@@ -51,7 +53,7 @@
                 <br>
                 <span class="card-title">Album</span>
                 <br>
-                <span class="card-title">Lyrics</span>
+                <span class="card-title" class="lyrics">Lyrics</span>
               </div>
             </div>
           </div>
@@ -78,6 +80,7 @@
 
 </body>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="assets/javascript/app.js"></script>
 </div>
 </body>
