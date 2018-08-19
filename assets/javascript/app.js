@@ -33,7 +33,9 @@ $("#submit").click(function getLyrics() {
                 $("#results").append( "<br>" + musicResults.track_list[i].track.track_name);
                 console.log( "<br>" + musicResults.track_list[i].track.track_id);
 
-                    
+                // $("#songArtist").append("Artist: " + data.message.body.track_list[0].track.artist_name)
+                    // $("#songName").append("Song: " + data.message.body.track_list[0].track.track_name)
+                    // $("#songAlbum").append("Album: " + data.message.body.track_list[0].track.album_name)                    
 
                     
             }
