@@ -25,11 +25,11 @@ $("#submit").click(function getLyrics() {
 
             var musicResults = data.message.body;
             console.log("music results data ", musicResults);
-            $("#results").empty();
+            
 
             // console.log("this is the length", musicResults.track_list[i].length);
             for (var i=0; i< musicResults.track_list.length; i++) {
-                console.log("this is the length", musicResults.track_list[i]);
+                
                 
                 var trackId= musicResults.track_list[i].track.track_id
                 var song = $("<p>").text(musicResults.track_list[i].track.track_name);
@@ -72,23 +72,6 @@ $("#submit").click(function getLyrics() {
 
         }
     });
-        // $.ajax({
-        //     type: "GET",
-        //     data: {
-        //         apikey:"8d9b55038036aa828dc45b390ee08d45",
-        //         track_id: trackId,
-        //         format:"jsonp",
-        //         callback:"jsonp_callback"
-        //     },
-        //     url: "https://api.musixmatch.com/ws/1.1/track.lyrics.get",
-        //     dataType: "jsonp",
-        //     jsonpCallback: 'jsonp_callback',
-        //     contentType: 'application/json',
-        //     success: function(data) {
-        //        console.log(data); 
-        
-        //     }
-        //     });
         
     });
     
