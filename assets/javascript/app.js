@@ -3,6 +3,7 @@ console.log("hello");
 
 $("#submit").click(function getLyrics() {
 
+    $("#results").empty();
     var artistSearch = $("input").val().trim();
     console.log(artistSearch);
     $(".lyrics").html("");
@@ -10,9 +11,10 @@ $("#submit").click(function getLyrics() {
     $.ajax({
         type: "GET",
         data: {
-            apikey: "8d9b55038036aa828dc45b390ee08d45",
+            apikey: "6190c76480b3eee0cf4a38930f8348e4",
             q_artist: artistSearch,
-            s_track_rating: "ASC",
+            // s_track_rating: "ASC",
+            f_has_lyrics: 1,
             format: "jsonp",
             callback: "jsonp_callback"
         },
@@ -22,27 +24,76 @@ $("#submit").click(function getLyrics() {
         contentType: 'application/json',
         success: function (data) {
 
+            console.log(data);
+
             var musicResults = data.message.body;
-            console.log("music results data ", musicResults);
+            
             
 
-            // console.log("this is the length", musicResults.track_list[i].length);
+            
             for (var i=0; i< musicResults.track_list.length; i++) {
-                console.log("this is the length", musicResults.track_list[i]);
+                
+                
+                var trackId= musicResults.track_list[i].track.track_id
+                var song = (musicResults.track_list[i].track.track_name);
+                
+                 console.log(musicResults.track_list[i].track.track_name);
+                
+                var trackId= musicResults.track_list[i].track.track_id;
 
-                $("#results").append( "<br><button>" + musicResults.track_list[i].track.track_name + "</button>");
-                console.log( "<br>" + musicResults.track_list[i].track.track_id);
+                // $("#results").append("<br><button id='songButton'>" + song + "</button>");
+                
+                var result = $("<br><button>");
 
-                // $("#songArtist").append("Artist: " + data.message.body.track_list[0].track.artist_name)
-                    // $("#songName").append("Song: " + data.message.body.track_list[0].track.track_name)
-                    // $("#songAlbum").append("Album: " + data.message.body.track_list[0].track.album_name)                    
+                result.addClass("songButton");
+
+                result.attr("data-id", trackId);
+
+                result.text(song);
+
+                $("#results").append(result);
+
+                console.log(trackId);
 
                     
+            
+        
+
+                $(".songButton").on("click", function(event) {
+                    event.preventDefault();
+
+                    
+                    console.log(data);
+
+                
+                $.ajax({
+                    type: "GET",
+                    data: {
+                        apikey:"6190c76480b3eee0cf4a38930f8348e4",
+                        track_id: trackId,
+                        format:"jsonp",
+                        callback:"jsonp_callback"
+                    },
+                    url: "https://api.musixmatch.com/ws/1.1/track.lyrics.get",
+                    dataType: "jsonp",
+                    jsonpCallback: 'jsonp_callback',
+                    contentType: 'application/json',
+                    success: function(data) {
+                       console.log(data); 
+                       console.log(data.message.body.lyrics.lyrics_body);
+                       
+                       
+                        $("#results").empty();
+                        $("#results").html(data.message.body.lyrics.lyrics_body);
+                    } 
+                
+                       });
+                    
+                    });
+                
+                }
             }
-
-
-        }
-    });
-
-
-});
+            });
+            
+    
+        })
