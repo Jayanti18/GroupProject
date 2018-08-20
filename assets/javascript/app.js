@@ -41,6 +41,7 @@ $("#submit").click(function getLyrics() {
                 
                 var trackId= musicResults.track_list[i].track.track_id;
 
+<<<<<<< HEAD
                 // $("#results").append("<br><button id='songButton'>" + song + "</button>");
                 
                 var result = $("<br><button>");
@@ -70,6 +71,20 @@ $("#submit").click(function getLyrics() {
                     type: "GET",
                     data: {
                         apikey:"6190c76480b3eee0cf4a38930f8348e4",
+=======
+                $("#results").append("<br><button id='songButton'>" + song + "</button>");
+                
+                console.log(trackId);
+
+                    
+            }
+            
+
+                $.ajax({
+                    type: "GET",
+                    data: {
+                        apikey:"8d9b55038036aa828dc45b390ee08d45",
+>>>>>>> 87f374de96c27f2e688b18db84c8f43d0f34e213
                         track_id: trackId,
                         format:"jsonp",
                         callback:"jsonp_callback"
@@ -82,6 +97,7 @@ $("#submit").click(function getLyrics() {
                        console.log(data); 
                        console.log(data.message.body.lyrics.lyrics_body);
                        
+<<<<<<< HEAD
                        
                         $("#results").empty();
                         $("#results").html(data.message.body.lyrics.lyrics_body);
@@ -93,6 +109,15 @@ $("#submit").click(function getLyrics() {
                 
                 }
             }
+=======
+                       if ($("#songButton").click()) {
+                        //   $("#results").empty();
+                        $("#results").text(data.message.body.lyrics.lyrics_body);
+                       }
+                       }
+                    });
+                }
+>>>>>>> 87f374de96c27f2e688b18db84c8f43d0f34e213
             });
             
     
