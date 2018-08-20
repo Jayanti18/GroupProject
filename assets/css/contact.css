@@ -21,7 +21,7 @@ body {
   
   .container {
     width: 100%;
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
     clear: both;
   }
@@ -101,13 +101,15 @@ body {
     background: #ee6e73;
     border: 0 none;
   }
-  
-  body {
+  /* footer */
+  footer {
     display: flex;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     flex-direction: column;
+    
+    
   }
-
+  
   main {
     flex: 1 0 auto;
   }
