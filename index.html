@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
 
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+
   <title>Musictopia</title>
   <link rel="stylsheet" text="text/css" href="assets/css/style.css">
 </head>
@@ -18,8 +21,12 @@
         <a href="#" class="brand-logo">Musictopia</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
+            <a id="user" href=""></a>
+          </li>
+          <li>
             <a href="contact.html">Contact Us</a>
           </li>
+          <!-- <li><a href="login.html">Login</a></li> -->
           <li>
             <a href="about.html">About Us</a>
           </li>
@@ -37,11 +44,13 @@
             <p>Search for your favorite artist, song, album or lyrics</p>
           </div>
           <form action="/action_page.php">
-              <input class="songChoice" type="text" name="fname" placeholder="  Artist, Song, Album or Lyrics">
+            <input class="songChoice white-text" type="text" name="fname" placeholder="  Artist, Song, Album or Lyrics">
           </form>
           <button class="btn waves-effect waves-light" id="submit" type="submit" name="action">Submit
           </button>
-          
+
+
+
         </div>
       </div>
       <div class="col m6">
@@ -49,7 +58,7 @@
           <div class="card-content white-text">
             <span class="card-title" id="results">Results!</span>
             <br>
-                <!-- <span class="card-title">Artist</span>
+            <!-- <span class="card-title">Artist</span>
                 <br>
                 <span class="card-title">Song</span>
                 <br>
@@ -57,11 +66,54 @@
                 <br>
                 <span class="card-title" class="lyrics">Lyrics</span>
               </div> -->
-            </div>
           </div>
         </div>
       </div>
     </div>
+    </div>
+
+    <!-- Added by Jayanti for login start-->
+    <section class="main-section">
+      <div class="row">
+        <div class="col m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <!-- <div class="card-panel"> -->
+              <span class="">Already registered, Enter your credential below</span>
+
+              <!-- <h6>Already registered, Enter your credential below</h6> -->
+              <div class="row">
+                <div class="card-content white-text col-s5">
+                  <input id="userId" type="text">
+                  <label for="uId">User Email</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="card-content white-text col-s5">
+                  <input id="password" type="password">
+                  <label for="pwd">Password</label>
+                </div>
+              </div>
+              <button class="btn waves-effect waves-light" id="log-in" type="button">Login</button>
+              <button class="btn waves-effect waves-light" id="btnSignout" type="button" href="#" class="hide">Logout</button>
+              <br>
+              <p>
+                <!-- <span class="blue-text text-darken-2">Already registered, Enter your credential below</span>  -->
+                <span class="">To log in as a Guest,<a href="" id="guest"> CLICK HERE</a></span>
+                <br>
+                <span class="">To register,<a href="register.html" id="register" class="">Click here
+                  </a></span>
+              </p>
+              <!-- </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Added by Jayanti for login End-->
+
+
   </main>
 
   <footer class="page-footer">
@@ -69,7 +121,9 @@
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">Thanks for using our page!</h5>
-          <p class="grey-text text-lighten-4">For Questions, Comments, or Concerns please contact us using the link at the top.</p>
+          <p class="grey-text text-lighten-4">For Questions, Comments, or Concerns please contact us using the link at the
+            top.
+          </p>
         </div>
       </div>
     </div>
@@ -82,8 +136,11 @@
 
 </body>
 
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="assets/javascript/app.js"></script>
+
+
 </div>
 </body>
 
