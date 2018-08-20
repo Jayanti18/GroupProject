@@ -15,3 +15,8 @@ body {
   text-emphasis-color: white;
   }
   /* Code added by Jayanti - End*/
+.row {
+  background-image: url(assets/images/musicpic2.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
