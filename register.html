@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en-us">
 
 <head>
@@ -16,9 +15,6 @@
 
     <!-- Moment.js Reference -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-
-    <title>Group Project</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/contact.css">
 </head>
 
 <body>
@@ -26,13 +22,14 @@
         <header>
             <nav>
                 <div class="nav-wrapper">
-                    <a href="#" class="brand-logo"></a>
+                    <a href="#" class="brand-logo">Musictopia</a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li>
-
-                            <a href="index.html">Musictopia</a>
-
+                            <a href="index.html">Home</a>
                         </li>
+                        </li>
+                        <!-- <li><a href="login.html">Login</a></li> -->
+                    </ul>
                     </ul>
                 </div>
             </nav>
@@ -43,72 +40,54 @@
             <h1>Ready to sign up?</h1>
 
             <div class="row">
+                <div class="input-firstName col s3">
+                    <input id="firstName" type="text">
+                    <label for="input-firstName">First Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-lastName col s3">
+                    <input id="lastName" type="text">
+                    <label for="input-lastName">Last Name</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-phoneNumber col s3">
+                    <input id="phoneNumber" type="text">
+                    <label for="input-phoneNumber">Phone Number</label>
+                </div>
+            </div>
+
+            <div class="row">
                 <div class="input-email col s3">
                     <input id="email" type="text">
                     <label for="input-email">Email address</label>
                 </div>
             </div>
 
-
             <div class="row">
-                <div class="input-userName col s3">
-                    <input id="userName" type="text">
-                    <label for="userId">Username</label>
+                <div class="input-userPassword col s3">
+                    <input id="userPassword" type="password">
+                    <label for="userPassword">Password</label>
                 </div>
             </div>
 
             <div class="row">
-                <div class="input-field col s3">
-                    <input id="password-input" type="password" class="validate">
-                    <label for="password">Password</label>
+                <div class="input-userGender col s3">
+                    <input id="userGender" type="text">
+                    <label for="userGender">Gender</label>
                 </div>
             </div>
-            <!-- <button class="btn-wide" id="register_form_submit color: #ee6e73" type="submit">
-                <span class="btn-label">Sign up</span>
-            </button> -->
-
             <div class="row">
-                <div class="col-l2">
-                    <!-- Dropdown Trigger -->
-                    <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Gender</a>
-                    <!-- Dropdown Structure -->
-                    <ul id='dropdown1' class='dropdown-content'>
-                        <li>
-                            <a href="#!">Male</a>
-                        </li>
-                        <li>
-                            <a href="#!">Female</a>
-                        </li>
-                        <li class="divider" tabindex="-1"></li>
-                        <!-- <li><a href="#!">three</a></li>
-        <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-        <li><a href="#!"><i class="material-icons">cloud</i>five</a></li> -->
-                    </ul>
+                <div class="input-userAge col s3">
+                    <input id="userAge" type="text">
+                    <label for="userAge">Age</label>
                 </div>
-                <div class="col-l2">
-                    <!-- Dropdown Trigger -->
-                    <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Age </a>
-                    <!-- Dropdown Structure -->
-                    <ul id='dropdown1' class='dropdown-content'>
-                        <li>
-                            <a href="#!">Male</a>
-                        </li>
-                        <li>
-                            <a href="#!">Female</a>
-                        </li>
-                        <li class="divider" tabindex="-1"></li>
-                        <!-- <li><a href="#!">three</a></li>
-            <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li> -->
-                    </ul>
-                </div>
-
-
-
             </div>
-            <br>
-            <button type="button" class="btn color: #ee6e73">Sign up</button>
 
+
+            <button id="signUp" type="button">Submit</button>
 
         </section>
 
@@ -121,7 +100,8 @@
                 <div class="row">
                     <div class="col l6 s12">
                         <h5 class="white-text">Thanks for using our page!</h5>
-                        <p class="grey-text text-lighten-4">For Questions, Comments, or Concerns please contact us using the link at the top.</p>
+                        <p class="grey-text text-lighten-4">For Questions, Comments, or Concerns please contact us using
+                            the link at the top.</p>
                     </div>
                 </div>
             </div>
@@ -133,8 +113,10 @@
         </footer>
 
 
-        <script type="text/javascript" src="assets/javascript/contactmusic.js"></script>
+        <!-- <script type="text/javascript" src="assets/javascript/contactmusic.js"></script> -->
+        <script type="text/javascript" src="assets/javascript/register.js"></script>
         </div>
+    </div>
 </body>
 
 </html>
