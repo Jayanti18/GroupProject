@@ -32,14 +32,13 @@ $("#submit").click(function getLyrics() {
                 
                 
                 var trackId= musicResults.track_list[i].track.track_id
-                var song = $("<p>").text(musicResults.track_list[i].track.track_name);
-                song.attr("id", trackId);
-                $("#results").append( song);
-                console.log(song);
-                console.log( "<br>" + musicResults.track_list[i].track.track_id);
-                var trackId= musicResults.track_list[i].track.track_id
+                var song = (musicResults.track_list[i].track.track_name);
+                
+                 console.log(musicResults.track_list[i].track.track_name);
+                
+                var trackId= musicResults.track_list[i].track.track_id;
 
-            
+                $("#results").append("<br><button id='songButton'>" + song + "</button>");
                 
                 console.log(trackId);
 
@@ -63,16 +62,14 @@ $("#submit").click(function getLyrics() {
                        console.log(data); 
                        console.log(data.message.body.lyrics.lyrics_body);
                        
-                       $("#results").text(data.message.body.lyrics.lyrics_body);
-
-                
-                    }
+                       if ($("#songButton").click()) {
+                        //   $("#results").empty();
+                        $("#results").text(data.message.body.lyrics.lyrics_body);
+                       }
+                       }
                     });
-
-
-        }
-    });
-        
-    });
+                }
+            });
+            
     
-     
+        })
