@@ -7,8 +7,6 @@
 
   <link rel="stylesheet" type="text/css" href="assets/css/contact.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
-
 
   <!-- Firebase Reference -->
   <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
@@ -21,59 +19,59 @@
 </head>
 
 <body>
-  <div id="main-container" class="container">
-    <header>
 
-      <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Musictopia</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-
-
-<div class= "row">
-  <div class="col-s4"></div>
-  <div class= "col-s4">
-   
-    <section class="main-section">
-      <h2>Contact Us</h2>
-
-
-      <form id="contact-form">
-        <ul>
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Musictopia</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
-            <label for="name">Name</label>
-            <input type="text" id="name-input" name="name" placeholder="John Smith " required="required">
-          </li>
-
-          <li>
-            <label for="name">Phone</label>
-            <input type="text" id="phone-input" name="name" placeholder=" " required="required">
-            <input type="text" id="phone-input" name="phone" placeholder="888-888-8888 " required="required">
+            <a href="about.html">About Us</a>
           </li>
           <li>
-            <label for="email">Email</label>
-            <input type="text" id="email-input" name="email" placeholder="johnsmith@yahoo.com " required="required">
-          </li>
-          <li>
-            <label for="message">Message</label>
-            <textarea id="message-input" name="message" placeholder="Type message here" required="required"></textarea>
+            <a href="index.html">Home</a>
           </li>
         </ul>
-       
-        <input type="submit" id="submit-input">
-      </form>
+      </div>
+    </nav>
+  </header>
 
-    </section>
-  
-  </div>
-  <br>
+  <main>
+    <div class="row">
+      <div class="col-m6">
+        <div class="card white darken-1">
+          <div class="card-content blue-grey-text">
+
+            <div class="main-section">
+              <h2>Contact Us</h2>
+              <form id="contact-form">
+                <ul>
+                  <li>
+                    <label for="name">Name</label>
+                    <input type="text" id="name-input" name="name" placeholder="John Smith " required="required">
+                  </li>
+                  <li>
+                    <label for="name">Phone</label>
+                    <input type="text" id="phone-input" name="phone" placeholder="888-888-8888 " required="required">
+                  </li>
+                  <li>
+                    <label for="email">Email</label>
+                    <input type="text" id="email-input" name="email" placeholder="johnsmith@yahoo.com " required="required">
+                  </li>
+                  <li>
+                    <label for="message">Message</label>
+                    <textarea id="message-input" name="message" placeholder="Type message here" required="required"></textarea>
+                  </li>
+                </ul>
+
+                <input class="btn waves-effect waves-light" type="submit" id="submit-input">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
   <footer class="page-footer">
     <div class="container">

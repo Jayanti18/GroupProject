@@ -7,8 +7,6 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/contact.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
-
 
     <!-- Firebase Reference -->
     <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
@@ -18,104 +16,103 @@
 </head>
 
 <body>
-    <div id="main-container" class="container">
-        <header>
-            <nav>
-                <div class="nav-wrapper">
-                    <a href="#" class="brand-logo">Musictopia</a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        </li>
-                        <!-- <li><a href="login.html">Login</a></li> -->
-                    </ul>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <br>
-        <section class="main-section">
-
-            <h1>Ready to sign up?</h1>
-
-            <div class="row">
-                <div class="input-firstName col s3">
-                    <input id="firstName" type="text">
-                    <label for="input-firstName">First Name</label>
-                </div>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Musictopia</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    </li>
+                    <!-- <li><a href="login.html">Login</a></li> -->
+                </ul>
+                </ul>
             </div>
-            <div class="row">
-                <div class="input-lastName col s3">
-                    <input id="lastName" type="text">
-                    <label for="input-lastName">Last Name</label>
-                </div>
-            </div>
+        </nav>
+    </header>
+    <br>
+    <main>
+        <div class="col-m6">
+            <div class="card white darken-1">
+                <div class="card-content blue-grey-text">
 
-            <div class="row">
-                <div class="input-phoneNumber col s3">
-                    <input id="phoneNumber" type="text">
-                    <label for="input-phoneNumber">Phone Number</label>
-                </div>
-            </div>
+                    <h1>Ready to sign up?</h1>
 
-            <div class="row">
-                <div class="input-email col s3">
-                    <input id="email" type="text">
-                    <label for="input-email">Email address</label>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="input-userPassword col s3">
-                    <input id="userPassword" type="password">
-                    <label for="userPassword">Password</label>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="input-userGender col s3">
-                    <input id="userGender" type="text">
-                    <label for="userGender">Gender</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-userAge col s3">
-                    <input id="userAge" type="text">
-                    <label for="userAge">Age</label>
-                </div>
-            </div>
-
-
-            <button id="signUp" type="button">Submit</button>
-
-        </section>
-
-
-        <!-- <br> -->
-        <br>
-
-        <footer class="page-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Thanks for using our page!</h5>
-                        <p class="grey-text text-lighten-4">For Questions, Comments, or Concerns please contact us using
-                            the link at the top.</p>
+                    <div class="row">
+                        <div class="input-firstName col s3">
+                            <input id="firstName" type="text">
+                            <label for="input-firstName">First Name</label>
+                        </div>
                     </div>
+                    <div class="row">
+                        <div class="input-lastName col s3">
+                            <input id="lastName" type="text">
+                            <label for="input-lastName">Last Name</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-phoneNumber col s3">
+                            <input id="phoneNumber" type="text">
+                            <label for="input-phoneNumber">Phone Number</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-email col s3">
+                            <input id="email" type="text">
+                            <label for="input-email">Email address</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-userPassword col s3">
+                            <input id="userPassword" type="password">
+                            <label for="userPassword">Password</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-userGender col s3">
+                            <input id="userGender" type="text">
+                            <label for="userGender">Gender</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-userAge col s3">
+                            <input id="userAge" type="text">
+                            <label for="userAge">Age</label>
+                        </div>
+                    </div>
+                    <br>
+                    <button class="btn waves-effect waves-light" id="signUp" type="button">Submit</button>
                 </div>
             </div>
-            <div class="footer-copyright" text-align: center;>
-                <div class="container">
-                    © 2018 Copyright
-                </div>
-
-        </footer>
-
-
-        <!-- <script type="text/javascript" src="assets/javascript/contactmusic.js"></script> -->
-        <script type="text/javascript" src="assets/javascript/register.js"></script>
         </div>
+    </main>
+    <br>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Thanks for using our page!</h5>
+                    <p class="grey-text text-lighten-4">For Questions, Comments, or Concerns please contact us using the
+                        link at the top.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright" text-align: center;>
+            <div class="container">
+                © 2018 Copyright
+            </div>
+
+    </footer>
+
+
+    <!-- <script type="text/javascript" src="assets/javascript/contactmusic.js"></script> -->
+    <script type="text/javascript" src="assets/javascript/register.js"></script>
+    </div>
     </div>
 </body>
 
