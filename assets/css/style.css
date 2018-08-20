@@ -7,3 +7,9 @@ body {
   main {
     flex: 1 0 auto;
   }
+
+.row {
+  background-image: url(assets/images/musicpic2.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
