@@ -1,124 +1,169 @@
-console.log("hello");
+$(document).ready(function () {
 
-
-$("#submit").click(function getLyrics() {
-
-    $("#results").empty();
-    var artistSearch = $("input").val().trim();
-    console.log(artistSearch);
-    $(".lyrics").html("");
+    $("#results").hide();
 
     $.ajax({
         type: "GET",
         data: {
             apikey: "6190c76480b3eee0cf4a38930f8348e4",
-            q_artist: artistSearch,
-            // s_track_rating: "ASC",
+
+            s_track_rating: "ASC",
             f_has_lyrics: 1,
             format: "jsonp",
             callback: "jsonp_callback"
         },
-        url: "https://api.musixmatch.com/ws/1.1/track.search",
+        url: "https://api.musixmatch.com/ws/1.1/track.chart.get",
         dataType: "jsonp",
         jsonpCallback: 'jsonp_callback',
         contentType: 'application/json',
         success: function (data) {
-
-            console.log(data);
+            console.log(data)
 
             var musicResults = data.message.body;
-            
-            
 
-            
-            for (var i=0; i< musicResults.track_list.length; i++) {
-                
-                
-                var trackId= musicResults.track_list[i].track.track_id
+            for (var i = 0; i < musicResults.track_list.length; i++) {
+
+
+                var trackId = musicResults.track_list[i].track.track_id
                 var song = (musicResults.track_list[i].track.track_name);
-                
-                 console.log(musicResults.track_list[i].track.track_name);
-                
-                var trackId= musicResults.track_list[i].track.track_id;
 
-<<<<<<< HEAD
+                console.log(musicResults.track_list[i].track.track_name);
+
+                var trackId = musicResults.track_list[i].track.track_id;
+
                 // $("#results").append("<br><button id='songButton'>" + song + "</button>");
-                
+
                 var result = $("<br><button>");
 
                 result.addClass("songButton");
+                result.addClass("waves-effect waves-light btn-large");
 
                 result.attr("data-id", trackId);
 
-                result.text(song);
+                result.text("Artist: " + data.message.body.track_list[i].track.artist_name + " Name: " + song + " Album: " + data.message.body.track_list[i].track.album_name) ;
 
-                $("#results").append(result);
+                $("#topTen").append(result);
 
                 console.log(trackId);
+            }
+        }
+    });
+    $("#submit").click(function getLyrics() {
 
-                    
-            
+        $("#topTen").hide();
+        $("#results").show();
+
         
 
-                $(".songButton").on("click", function(event) {
+
+        var artistSearch = $("input").val().trim();
+        console.log(artistSearch);
+        $("input").html("");
+
+        $.ajax({
+            type: "GET",
+            data: {
+                apikey: "6190c76480b3eee0cf4a38930f8348e4",
+                q_artist: artistSearch,
+                s_track_rating: "ASC",
+                f_has_lyrics: 1,
+                format: "jsonp",
+                callback: "jsonp_callback"
+            },
+            url: "https://api.musixmatch.com/ws/1.1/track.search",
+            dataType: "jsonp",
+            jsonpCallback: 'jsonp_callback',
+            contentType: 'application/json',
+            success: function (data) {
+
+                console.log(data);
+
+                var musicResults = data.message.body;
+
+
+
+
+                for (var i = 0; i < musicResults.track_list.length; i++) {
+
+
+                    var trackId = musicResults.track_list[i].track.track_id;
+                    var song = musicResults.track_list[i].track.track_name;
+
+                    console.log(musicResults.track_list[i].track.track_name);
+
+                    var trackId = musicResults.track_list[i].track.track_id;
+
+                    // $("#results").append("<br><button id='songButton'>" + song + "</button>");
+
+                    var result = $("<br><button>");
+
+                    result.addClass("songButton");
+                    result.addClass("waves-effect waves-light btn-large");
+
+                    result.attr("data-id", trackId);
+
+                    result.text("Artist: " + data.message.body.track_list[i].track.artist_name + " Name: " + song + " Album: " + data.message.body.track_list[i].track.album_name);
+
+                    $("#songArtist").append(result);
+
+                    console.log(trackId);
+                }
+
+
+
+
+                $(".songButton").on("click", function (event) {
                     event.preventDefault();
 
-                    
+                   var songId = $(".songButton").data();
+                   trackId = songId;
+
+                   console.log(trackId);
+                        
+
+
+                    $("#songArtist").empty();
+
+
+
                     console.log(data);
 
-                
-                $.ajax({
-                    type: "GET",
-                    data: {
-                        apikey:"6190c76480b3eee0cf4a38930f8348e4",
-=======
-                $("#results").append("<br><button id='songButton'>" + song + "</button>");
-                
-                console.log(trackId);
 
-                    
-            }
-            
+                    $.ajax({
+                        type: "GET",
+                        data: {
+                            apikey: "6190c76480b3eee0cf4a38930f8348e4",
 
-                $.ajax({
-                    type: "GET",
-                    data: {
-                        apikey:"8d9b55038036aa828dc45b390ee08d45",
->>>>>>> 87f374de96c27f2e688b18db84c8f43d0f34e213
-                        track_id: trackId,
-                        format:"jsonp",
-                        callback:"jsonp_callback"
-                    },
-                    url: "https://api.musixmatch.com/ws/1.1/track.lyrics.get",
-                    dataType: "jsonp",
-                    jsonpCallback: 'jsonp_callback',
-                    contentType: 'application/json',
-                    success: function(data) {
-                       console.log(data); 
-                       console.log(data.message.body.lyrics.lyrics_body);
-                       
-<<<<<<< HEAD
-                       
-                        $("#results").empty();
-                        $("#results").html(data.message.body.lyrics.lyrics_body);
-                    } 
-                
-                       });
-                    
+                            track_id: trackId,
+                            format: "jsonp",
+                            callback: "jsonp_callback"
+                        },
+                        url: "https://api.musixmatch.com/ws/1.1/track.lyrics.get",
+                        dataType: "jsonp",
+                        jsonpCallback: 'jsonp_callback',
+                        contentType: 'application/json',
+                        success: function (data) {
+                            console.log(data);
+                            console.log(data.message.body.lyrics[].lyrics_body);
+
+
+
+                            $("#songArtist").append(data.message.body.lyrics.lyrics_body);
+                        }
+
                     });
-                
-                }
+
+                });
+
             }
-=======
-                       if ($("#songButton").click()) {
-                        //   $("#results").empty();
-                        $("#results").text(data.message.body.lyrics.lyrics_body);
-                       }
-                       }
-                    });
-                }
->>>>>>> 87f374de96c27f2e688b18db84c8f43d0f34e213
-            });
-            
-    
         })
+    })
+
+});
+
+
+
+
+                        // $("#songArtist").append("Artist: " + data.message.body.track_list[0].track.artist_name)
+                        // $("#songName").append("Song: " + data.message.body.track_list[0].track.track_name)
+                        // $("#songAlbum").append("Album: " + data.message.body.track_list[0].track.album_name)
