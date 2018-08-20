@@ -4,86 +4,90 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
 
-    <link rel="stylesheet" type="text/css" href="assets/css/contact.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
-    
+  <link rel="stylesheet" type="text/css" href="assets/css/contact.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- Firebase Reference -->
-    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
 
-    <!-- Moment.js Reference -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <!-- Moment.js Reference -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 
   <title>Group Project</title>
   <link rel="stylesheet" type="text/css" href="assets/css/contact.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-          <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Contact Us</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li>
-                <a href="index.html">Musictopia</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
 
-  
-
-  <div id="main-container" class="container">
-    <section class="main-section">
-      <h1>Contact Us</h1>
-
-      <form id="contact-form">
-        <ul>
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Musictopia</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
-            <label for="name">Name</label>
-            <input type="text" id="name-input" name="name" placeholder=" " required="required">
-          </li>
-
-          <li>
-                <label for="name">Phone</label>
-                <input type="text" id="phone-input" name="name" placeholder=" " required="required">
-              </li>
-          <li>
-            <label for="email">Email</label>
-            <input type="text" id="email-input" name="email" placeholder=" " required="required">
+            <a href="about.html">About Us</a>
           </li>
           <li>
-            <label for="message">Message</label>
-            <textarea id="message-input" name="message" required="required"></textarea>
+            <a href="index.html">Home</a>
           </li>
         </ul>
-        <input type="submit" id="submit-input">
-      </form>
+      </div>
+    </nav>
+  </header>
 
-    </section>
+  <main>
+    <div class="row">
+      <div class="col-m6">
+        <div class="card white darken-1">
+          <div class="card-content blue-grey-text">
 
-  </div>
-<br>
- 
-  <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Thanks for using our page!</h5>
-            <p class="grey-text text-lighten-4">For Questions, Comments, or Concerns please contact us using the link at the top.</p>
+            <div class="main-section">
+              <h2>Contact Us</h2>
+              <form id="contact-form">
+                <ul>
+                  <li>
+                    <label for="name">Name</label>
+                    <input type="text" id="name-input" name="name" placeholder="John Smith " required="required">
+                  </li>
+                  <li>
+                    <label for="name">Phone</label>
+                    <input type="text" id="phone-input" name="phone" placeholder="888-888-8888 " required="required">
+                  </li>
+                  <li>
+                    <label for="email">Email</label>
+                    <input type="text" id="email-input" name="email" placeholder="johnsmith@yahoo.com " required="required">
+                  </li>
+                  <li>
+                    <label for="message">Message</label>
+                    <textarea id="message-input" name="message" placeholder="Type message here" required="required"></textarea>
+                  </li>
+                </ul>
+
+                <input class="btn waves-effect waves-light" type="submit" id="submit-input">
+              </form>
+            </div>
           </div>
         </div>
       </div>
-      <div class="footer-copyright">
-        <div class="container">
-          © 2018 Copyright
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Thanks for contacting us!</h5>
+          <p class="grey-text text-lighten-4">To return click the link at the top.</p>
         </div>
       </div>
-    </footer>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2018 Copyright
+      </div>
+    </div>
+  </footer>
   <script type="text/javascript" src="assets/javascript/contactmusic.js"></script>
 </body>
 

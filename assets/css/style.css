@@ -7,3 +7,16 @@ body {
   main {
     flex: 1 0 auto;
   }
+
+  /* Code added by Jayanti - Start*/
+  #main-section {
+  margin-left: 50px;
+  padding-left: 100px;
+  text-emphasis-color: white;
+  }
+  /* Code added by Jayanti - End*/
+.row {
+  background-image: url(assets/images/musicpic2.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
