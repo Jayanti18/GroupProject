@@ -83,6 +83,39 @@ $.ajax({
         }
     }
 });
+
+
+}
+
+
+}
+})
+
+var trackSearch = $("input").val().trim();
+console.log(trackSearch);
+$(".lyrics").html("");
+;
+$.ajax({
+type: "GET",
+data: {
+    apikey: "8d9b55038036aa828dc45b390ee08d45",
+    q_track: trackSearch,
+    format: "jsonp",
+    callback: "jsonp_callback"
+},
+url: "https://api.musixmatch.com/ws/1.1/track.search",
+dataType: "jsonp",
+jsonpCallback: 'jsonp_callback',
+contentType: 'application/json',
+success: function (data) {
+    console.log(data);
+
+}
+})
+
+
+});
+
   
 
 //Code added by Jayanti 
@@ -178,34 +211,3 @@ $.ajax({
 }());
 // End of Code add by Jayanti 
 
-
-            }
-
-
-        }
-    })
-
-    var trackSearch = $("input").val().trim();
-    console.log(trackSearch);
-    $(".lyrics").html("");
-    ;
-    $.ajax({
-        type: "GET",
-        data: {
-            apikey: "8d9b55038036aa828dc45b390ee08d45",
-            q_track: trackSearch,
-            format: "jsonp",
-            callback: "jsonp_callback"
-        },
-        url: "https://api.musixmatch.com/ws/1.1/track.search",
-        dataType: "jsonp",
-        jsonpCallback: 'jsonp_callback',
-        contentType: 'application/json',
-        success: function (data) {
-            console.log(data);
-
-        }
-    })
-
-
-});
